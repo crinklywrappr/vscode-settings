@@ -42,6 +42,10 @@
             "before": ["<leader>", "f", "e", "d"],
             "commands": ["workbench.action.openSettings"]
         },
+        {
+            "before": ["<leader>", "c", "c"],
+            "commands": ["workbench.action.showCommands"]
+        },
         // close
         {
             "before": ["<leader>", "w", "d"],
