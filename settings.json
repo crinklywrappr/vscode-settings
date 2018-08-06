@@ -266,8 +266,6 @@
         }
     ],
 
-    // These don't appear to work
-    // https://github.com/VSCodeVim/Vim/issues/2934
     "vim.visualModeKeyBindings": [
         {
             "before": ["f", "d"],
