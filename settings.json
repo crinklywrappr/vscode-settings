@@ -38,6 +38,10 @@
             "before": ["<leader>", "'"],
             "commands": ["workbench.action.terminal.focus"]
         },
+        {
+            "before": ["<leader>", "f", "e", "d"],
+            "commands": ["workbench.action.openSettings"]
+        },
         // close
         {
             "before": ["<leader>", "w", "d"],
@@ -208,7 +212,28 @@
             "when": "editorTextFocus && !editorReadonly"
         },
 
-        // paredit
+        // paredit (movement)
+        {
+            "before": ["<leader>", "k", "l"],
+            "commands": ["paredit.forwardSexp"],
+            "when": "editorTextFocus"
+        },
+        {
+            "before": ["<leader>", "k", "h"],
+            "commands": ["paredit.BackwardSexp"],
+            "when": "editorTextFocus"
+        },
+        {
+            "before": ["<leader>", "k", "j"],
+            "commands": ["paredit.forwardDownSexp"],
+            "when": "editorTextFocus"
+        },
+        {
+            "before": ["<leader>", "k", "k"],
+            "commands": ["paredit.BackwardUpSexp"],
+            "when": "editorTextFocus"
+        },
+        // paredit (manip)
         {
             "before": ["<leader>", "k", "s"],
             "commands": ["paredit.slurpSexpForward"],
@@ -287,4 +312,10 @@
     "window.menuBarVisibility": "toggle",
     "workbench.editor.showTabs": false,
     "workbench.editor.closeEmptyGroups": false,
+    "editor.fontFamily": "Hack",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "workbench.iconTheme": "vscode-icons"
 }
