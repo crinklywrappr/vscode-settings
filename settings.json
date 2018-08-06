@@ -1,0 +1,292 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "vim.leader": "<space>",
+    // "vim.debugstuff.loggingLevel": "debug",
+    
+    "vim.normalModeKeyBindings": [
+        // vim keybindings
+        {
+            "before": ["u"],
+            "commands": ["undo"],
+            "when": "textInputFocus && !editorReadonly"
+        },
+        {
+            "before": ["z", "m"],
+            "commands": ["editor.foldAll"],
+            "when": "editorTextFocus"
+        },
+        {
+            "before": ["z", "r"],
+            "commands": ["editor.unfoldAll"],
+            "when": "editorTextFocus"
+        },
+
+        // spacemacs standard bindings
+        {
+            // doesn't work with count prefix :-(
+            // https://github.com/VSCodeVim/Vim/issues/2933
+            // Just use gcc - vim-commentary is already installed and bound to that
+            "before": ["<leader>", "c", "l"],
+            "commands": ["editor.action.commentLine"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "f", "s"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["<leader>", "'"],
+            "commands": ["workbench.action.terminal.focus"]
+        },
+        // close
+        {
+            "before": ["<leader>", "w", "d"],
+            "commands": ["workbench.action.joinTwoGroups",
+                "workbench.action.openNextRecentlyUsedEditorInGroup",
+                "workbench.action.focusActiveEditorGroup"],
+            "when": "multipleEditorGroups"
+        },
+        {
+            "before": ["<leader>", "w", "D"],
+            "commands": ["workbench.action.closeOtherEditors",
+                "workbench.action.closeActiveEditor"],
+            "when": "!multipleEditorGroups"
+        },
+        // navigate
+        {
+            "before": ["<leader>", "w", "j"],
+            "commands": ["workbench.action.focusBelowGroup"]
+        },
+        {
+            "before": ["<leader>", "w", "h"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+            "before": ["<leader>", "w", "l"],
+            "commands": ["workbench.action.focusRightGroup"]
+        },
+        {
+            "before": ["<leader>", "w", "k"],
+            "commands": ["workbench.action.focusAboveGroup"]
+        },
+        // quick-nav
+        {
+            "before": ["<leader>", "0"],
+            "commands": ["workbench.action.focusSideBar"]
+        },
+        {
+            "before": ["<leader>", "1"],
+            "commands": ["workbench.action.focusFirstEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "2"],
+            "commands": ["workbench.action.focusSecondEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "3"],
+            "commands": ["workbench.action.focusThirdEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "4"],
+            "commands": ["workbench.action.focusFourthEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "5"],
+            "commands": ["workbench.action.focusFifthEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "6"],
+            "commands": ["workbench.action.focusSixthEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "7"],
+            "commands": ["workbench.action.focusSeventhEditorGroup"]
+        },
+        {
+            "before": ["<leader>", "8"],
+            "commands": ["workbench.action.focusEighthEditorGroup"]
+        },
+        // move
+        {
+            "before": ["<leader>", "w", "K"],
+            "commands": ["workbench.action.moveEditorToAboveGroup"]
+        },
+        {
+            "before": ["<leader>", "w", "J"],
+            "commands": ["workbench.action.moveEditorToBelowGroup"]
+        },
+        {
+            "before": ["<leader>", "w", "H"],
+            "commands": ["workbench.action.moveEditorToLeftGroup"]
+        },
+        {
+            "before": ["<leader>", "w", "L"],
+            "commands": ["workbench.action.moveEditorToRightGroup"]
+        },
+        // split
+        {
+            "before": ["<leader>", "w", "S"],
+            "commands": ["workbench.action.splitEditorRight"]
+        },
+        {
+            "before": ["<leader>", "w", "V"],
+            "commands": ["workbench.action.splitEditorDown"]
+        },
+        {
+            "before": ["<leader>", "w", "s"],
+            "commands": ["workbench.action.splitEditorRight", 
+                "workbench.action.navigateLeft"]
+        },
+        {
+            "before": ["<leader>", "w", "v"],
+            "commands": ["workbench.action.splitEditorDown", 
+                "workbench.action.navigateUp"]
+        },
+
+        // spacemacs standard bindings (modified)
+        {
+            "before": ["<leader>", "t", "z"],
+            "commands": ["workbench.action.toggleZenMode"],
+        },
+        {
+            "before": ["<leader>", "t", "s"],
+            "commands": ["workbench.action.toggleSidebarVisibility"],
+        },
+
+        // sidebar stuffs
+        {
+            "before": ["<leader>", "b", "b"],
+            "commands": ["workbench.files.action.focusOpenEditorsView"],
+        },
+        {
+            "before": ["<leader>", "p", "t"],
+            "commands": ["workbench.view.explorer"],
+        },
+        {
+            "before": ["<leader>", "t", "f"],
+            "commands": ["workbench.view.search"],
+        },
+        {
+            "before": ["<leader>", "t", "v"],
+            "commands": ["workbench.view.scm"],
+        },
+        {
+            "before": ["<leader>", "t", "e"],
+            "commands": ["workbench.view.extensions"],
+        },
+        {
+            "before": ["<leader>", "t", "d"],
+            "commands": ["workbench.view.debug"],
+        },
+
+        // spacemacs custom bindings
+        {
+            "before": ["<leader>", "o", "g", "b"],
+            "commands": ["editor.action.selectHighlights"],
+            "when": "editorTextFocus"
+        },
+        {
+            "before": ["<leader>", "o", "f", "s"],
+            "commands": ["editor.action.formatSelection"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "o", "e", "e"],
+            "commands": ["editor.emmet.action.expandAbbreviation"],
+            "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+        },
+
+        // spacemacs layer-specific bindings
+        {
+            "before": ["<leader>", "m", "r", "s"],
+            "commands": ["editor.action.rename"],
+            "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "m", "f", "b"],
+            "commands": ["editor.action.formatDocument"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+
+        // paredit
+        {
+            "before": ["<leader>", "k", "s"],
+            "commands": ["paredit.slurpSexpForward"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "k", "b"],
+            "commands": ["paredit.barfSexpForward"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "k", "S"],
+            "commands": ["paredit.slurpSexpBackward"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "k", "B"],
+            "commands": ["paredit.barfSexpBackward"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "k", "t"],
+            "commands": ["paredit.forwardSexp",
+                "paredit.backwardSexp",
+                "paredit.transpose"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "k", "w"],
+            "commands": ["paredit.forwardSexp",
+                "paredit.backwardSexp",
+                "paredit.wrapAroundParens"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "k", "v", "w"],
+            "commands": ["paredit.forwardSexp",
+                "paredit.backwardSexp",
+                "paredit.wrapAroundSquare"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "k", "m", "w"],
+            "commands": ["paredit.forwardSexp",
+                "paredit.backwardSexp",
+                "paredit.wrapAroundCurly"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+    ],
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["f", "d"],
+            "after": ["<ESC>"]
+        }
+    ],
+
+    // These don't appear to work
+    // https://github.com/VSCodeVim/Vim/issues/2934
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["f", "d"],
+            "after": ["<ESC>"]
+        },
+        {
+            "before": ["m", "j"],
+            "commands": ["editor.action.moveLinesDownAction"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["m", "k"],
+            "commands": ["editor.action.moveLinesUpAction"],
+            "when": "editorTextFocus && !editorReadonly"
+        }
+    ],
+    "editor.lineNumbers": "relative",
+    "vim.useSystemClipboard": true,
+    "window.menuBarVisibility": "toggle",
+    "workbench.editor.showTabs": false,
+    "workbench.editor.closeEmptyGroups": false,
+}

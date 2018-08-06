@@ -1,0 +1,115 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    // ****************** Sidebar ******************
+    // universal
+    {
+        "key": "escape",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "listFocus && !inputFocus"
+    },
+
+    // universal (vim)
+    {
+        "key": "t s",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "listFocus && !inputFocus"
+    },
+
+    // nav (vim)
+    {
+        "key": "b b",
+        "command": "workbench.files.action.focusOpenEditorsView",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "p t",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "listFocus && !inputFocus"
+    },
+    // quick-nav
+    {
+        "key": "space 1",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "space 2",
+        "command": "workbench.action.focusSecondEditorGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "space 3",
+        "command": "workbench.action.focusThirdEditorGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "space 4",
+        "command": "workbench.action.focusFourthEditorGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "space 5",
+        "command": "workbench.action.focusFifthEditorGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "space 6",
+        "command": "workbench.action.focusSixthEditorGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "space 7",
+        "command": "workbench.action.focusSeventhEditorGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "space 8",
+        "command": "workbench.action.focusEighthEditorGroup",
+        "when": "listFocus && !inputFocus"
+    },
+
+    // misc (vim)
+    {
+        "key": "g r",
+        "command": "workbench.files.action.refreshFilesExplorer",
+        "when": "listFocus && explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "c f",
+        "command": "explorer.newFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "c d",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "y f",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "p f",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+
+    // ****************** Editor ******************
+    // {
+        // "key": "shift+;",
+        // "command": "vim.showQuickpickCmdLine",
+        // "when": "inZenMode && vim.mode != 'Insert'"
+    // }
+
+]
