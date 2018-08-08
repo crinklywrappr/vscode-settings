@@ -46,6 +46,11 @@
             "before": ["<leader>", "c", "c"],
             "commands": ["workbench.action.showCommands"]
         },
+        {
+            "before": ["<leader>", "f", "f"],
+            "commands": ["workbench.action.files.openFile"]
+        },
+
         // close
         {
             "before": ["<leader>", "w", "d"],
@@ -160,6 +165,10 @@
             "before": ["<leader>", "t", "s"],
             "commands": ["workbench.action.toggleSidebarVisibility"],
         },
+        {
+            "before": ["<leader>", "c", "w"],
+            "commands": ["workbench.action.openWorkspace"],
+        },
 
         // sidebar stuffs
         {
@@ -263,6 +272,20 @@
             "commands": ["paredit.forwardSexp",
                 "paredit.backwardSexp",
                 "paredit.transpose"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "k", "d", "x"],
+            "commands": ["paredit.forwardSexp",
+                "paredit.backwardSexp",
+                "paredit.cutForwardSexp"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": ["<leader>", "k", "y"],
+            "commands": ["paredit.forwardSexp",
+                "paredit.backwardSexp",
+                "paredit.yankForwardSexp"],
             "when": "editorTextFocus && !editorReadonly"
         },
         {
