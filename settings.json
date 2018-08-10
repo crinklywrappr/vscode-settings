@@ -8,17 +8,15 @@
         {
             "before": ["u"],
             "commands": ["undo"],
-            "when": "textInputFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["z", "m"],
-            "commands": ["editor.foldAll"],
-            "when": "editorTextFocus"
+            "commands": ["editor.foldAll"]
         },
         {
             "before": ["z", "r"],
-            "commands": ["editor.unfoldAll"],
-            "when": "editorTextFocus"
+            "commands": ["editor.unfoldAll"]
         },
 
         // spacemacs standard bindings
@@ -28,7 +26,7 @@
             // Just use gcc - vim-commentary is already installed and bound to that
             "before": ["<leader>", "c", "l"],
             "commands": ["editor.action.commentLine"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "f", "s"],
@@ -200,114 +198,109 @@
         {
             "before": ["<leader>", "o", "g", "b"],
             "commands": ["editor.action.selectHighlights"],
-            "when": "editorTextFocus"
         },
         {
             "before": ["<leader>", "o", "f", "s"],
             "commands": ["editor.action.formatSelection"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "o", "e", "e"],
             "commands": ["editor.emmet.action.expandAbbreviation"],
-            "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+            "when": "!editorReadonly && !editorTabMovesFocus"
         },
 
         // spacemacs layer-specific bindings
         {
             "before": ["<leader>", "m", "r", "s"],
             "commands": ["editor.action.rename"],
-            "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+            "when": "editorHasRenameProvider && !editorReadonly"
         },
         {
             "before": ["<leader>", "m", "f", "b"],
             "commands": ["editor.action.formatDocument"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
 
         // paredit (movement)
         {
             "before": ["<leader>", "k", "l"],
             "commands": ["paredit.forwardSexp"],
-            "when": "editorTextFocus"
         },
         {
             "before": ["<leader>", "k", "h"],
             "commands": ["paredit.BackwardSexp"],
-            "when": "editorTextFocus"
         },
         {
             "before": ["<leader>", "k", "j"],
             "commands": ["paredit.forwardDownSexp"],
-            "when": "editorTextFocus"
         },
         {
             "before": ["<leader>", "k", "k"],
             "commands": ["paredit.BackwardUpSexp"],
-            "when": "editorTextFocus"
         },
         // paredit (manip)
         {
             "before": ["<leader>", "k", "s"],
             "commands": ["paredit.slurpSexpForward"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "k", "b"],
             "commands": ["paredit.barfSexpForward"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "k", "S"],
             "commands": ["paredit.slurpSexpBackward"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "k", "B"],
             "commands": ["paredit.barfSexpBackward"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "k", "t"],
             "commands": ["paredit.forwardSexp",
                 "paredit.backwardSexp",
                 "paredit.transpose"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "k", "d", "x"],
             "commands": ["paredit.forwardSexp",
                 "paredit.backwardSexp",
                 "paredit.cutForwardSexp"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "k", "y"],
             "commands": ["paredit.forwardSexp",
                 "paredit.backwardSexp",
                 "paredit.yankForwardSexp"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "k", "w"],
             "commands": ["paredit.forwardSexp",
                 "paredit.backwardSexp",
                 "paredit.wrapAroundParens"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "k", "v", "w"],
             "commands": ["paredit.forwardSexp",
                 "paredit.backwardSexp",
                 "paredit.wrapAroundSquare"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["<leader>", "k", "m", "w"],
             "commands": ["paredit.forwardSexp",
                 "paredit.backwardSexp",
                 "paredit.wrapAroundCurly"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
     ],
 
@@ -326,12 +319,12 @@
         {
             "before": ["m", "j"],
             "commands": ["editor.action.moveLinesDownAction"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         },
         {
             "before": ["m", "k"],
             "commands": ["editor.action.moveLinesUpAction"],
-            "when": "editorTextFocus && !editorReadonly"
+            "when": "!editorReadonly"
         }
     ],
     "editor.lineNumbers": "relative",
